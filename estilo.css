@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --Light-Gray: #F7F7F7;
+    --Off-White: #FDFDFD;
+    --Deep-Navy: #002244;
+    --Soft-Gray: #A9A9A9;
+    --Slate-Gray: #5A6B7D;
+    --Shadow-RGBA: rgba(0, 0, 0, 0.15);
+    --Pale-Blue: #BACFE3;
+    --Rich-Blue: #004080;
+    --Dark-Charcoal: #26292E;
+    --Forest-Green: #425660;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    background: var(--Off-White);
+}
+
+::selection {
+    background: var(--Deep-Navy);
+    color: var(--Off-White);
+}
+
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: absolute;
+    margin: 25px 0px 0px 25px;
+}
+
+header .logo {
+    display: flex;
+    align-items: flex-start;
+    width: 100px;
+    height: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    background: url(../imagenes/portada.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.encriptador {
+    width: 50%;
+    margin: 120px 0px 0px 100px;
+    background: transparent;
+}
+
+.encriptar {
+    width: 550px;
+    height: 220px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    outline: none;
+    border: 1px solid var(--Soft-Gray);
+    border-radius: 10px;
+    resize: none;
+    color: var(--Deep-Navy);
+}
+
+.encriptar::placeholder,
+.encriptar:focus {
+    color: var(--Deep-Navy);
+}
+
+.encriptador-aviso {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 400px;
+}
+
+.texto-aviso {
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    opacity: 0.8;
+    color: var(--Slate-Gray);
+}
+
+.encriptador-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 430px;
+}
+
+.btn-encriptar,
+.btn-desencriptar,
+.btn-copiar {
+    width: 250px;
+    height: 55px;
+    padding: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 14px 20px -5px var(--Shadow-RGBA);
+}
+
+.btn-encriptar {
+    color: var(--Off-White);
+    background: var(--Deep-Navy);
+    border: 1px solid var(--Deep-Navy);
+}
+
+.btn-encriptar:active,
+.btn-desencriptar:active,
+.btn-copiar:active {
+    box-shadow: inset 2px 2px 4px var(--Light-Gray),
+    inset -3px -4px 8px var(--Deep-Navy);
+    color: var(--Rich-Blue);
+}
+
+.btn-desencriptar {
+    color: var(--Deep-Navy);
+    background: var(--Pale-Blue);
+    border: 1px solid var(--Deep-Navy);
+}
+
+.tarjeta {
+    width: 220px;
+    height: 460px;
+    background: var(--Light-Gray);
+    box-shadow: 8px 18px 24px -8px var(--Dark-Charcoal);
+    position: relative;
+    margin-top: 30px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.tarjeta-contenedor {
+    width: 200px;
+    margin: auto;
+    margin-top: 48%;
+    background: var(--Light-Gray);
+}
+
+.img-muñeco {
+    background: var(--Light-Gray);
+}
+
+.texto-uno {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Dark-Charcoal);
+}
+
+.texto-dos {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--Slate-Gray);
+}
+
+.evaluar {
+    width: 100%;
+    height: 370px;
+    position: absolute;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--Forest-Green);
+    background: transparent;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus {
+    outline: none;
+}
+
+@media(max-width: 1250px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador {
+        margin: 120px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador-contenedor {
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .encriptador-aviso {
+        position: inherit;
+        margin: 10px;
+    }
+
+    .tarjeta {
+        width: 550px;
+        height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .tarjeta-contenedor {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .img-muñeco {
+        display: none;
+    }
+
+    .btn-copiar {
+        position: inherit;
+        width: 100%;
+    }
+
+    .evaluar {
+        width: 100%;
+        height: 180px;
+        padding: 10px;
+    }
+}
+
+@media(max-width: 720px) {
+    header .logo {
+        width: 100%;
+        background: var(--Off-White);
+        padding: 2px;
+    }
+
+    .encriptar {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .encriptador-contenedor {
+        display: grid;
+        gap: 18px;
+    }
+
+    .tarjeta {
+        width: 90%;
+    }
+}
